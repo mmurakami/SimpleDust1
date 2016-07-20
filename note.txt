@@ -1,0 +1,22 @@
+This generator is dustHTML/less based project.
+
+1. make sure you have node and npm
+2. install Yeoman - npm install -g yo
+
+4. install node dependencies - npm install
+5. symlink it for npm - npm link
+(6. If you plan to use the Vagrant features you should install and setup both Vagrant and VirtualBox.)
+
+
+usage:
+1. create a folder for your project and cd into it
+2. run the generator (DustLess1) - yo DustLess1
+3. answer the questions, let the installer finihs
+4. cd into the src folder
+5. run build system
+- grunt [modernizr] [icons] [prod]
+
+
+note:
+- if you choose to use webfont for icons, you will need python 1.5-3.0
+

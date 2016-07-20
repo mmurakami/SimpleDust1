@@ -1,0 +1,28 @@
+var entrypoints = {};
+var serverport = 3000;
+var serverdomain = '0.0.0.0'; // *?
+
+var src = '../<%= srcdir %>/'
+var dest = '../<%= distpath %>/';
+var assets = '<%= assetspath %>/';
+var templates = 'templates/';
+var prod = '../'; // change this to BE directory
+
+module.exports = {
+	paths: {
+		SRC: src,
+		SRC_JS: src + 'js/',
+		SRC_CSS: src + 'styles/',
+		DEST: dest,
+		DEST_JS: dest + assets + 'js/',
+		DEST_CSS: dest + assets + 'css/',
+		PROD: prod,
+		ASSETS: assets,
+		STATICFILES: 'static/',
+		SERVERDOMAIN: serverdomain,
+		SERVERPORT: serverport,
+		TEMPLATES: templates,
+		VIEWS: templates + 'views/'
+	},
+	grunttasks: './grunt/'
+}

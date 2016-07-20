@@ -1,0 +1,10 @@
+{>"templates/layouts/master"/}
+
+{<title}Homepage{/title}
+
+{<main}
+			<article>
+					<p>Hello, <% if (hasFontAwesome) { %><span class="fa fa-spin fa-coffee"></span><% } %> Nerd.</p>
+			</article>
+{/main}
+{<js}<script src="/<%= assetspath %>/js/script.min.js"></script>{/js}

@@ -1,0 +1,30 @@
+<% if (hasBootstrap) { %>
+/*bootstrap*/
+@import "overrides/bootstrap/bootstrap";
+<% } %> 
+<% if (hasFontAwesome) { %>
+/*Font awesome*/
+@import "overrides/fontawesome/font-awesome";
+<% } %>
+
+/*
+@import anything you need here
+*/
+
+/*
+Include all custom stuff here
+*/
+
+body {
+	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	background-color: #000;
+	color: #090;
+	p {
+		<% if (hasBootstrap)  { %>
+		margin: 2em 0em;
+		<% } %> 
+		&:before {
+			content: ">";
+		}
+	}
+}

@@ -1,0 +1,12 @@
+/* Mixins */
+<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>
+@<%= classPrefix %><%= glyphs[glyphIdx] %>-content: "\<%= codepoints[glyphIdx] %>";
+<% }%>
+
+<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>
+.<%= classPrefix %><%= glyphs[glyphIdx] %> {
+    &:before {
+        content:@<%= classPrefix %><%= glyphs[glyphIdx] %>-content;
+    }
+}
+<% }%>

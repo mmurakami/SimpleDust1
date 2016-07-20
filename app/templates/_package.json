@@ -1,0 +1,43 @@
+{
+  "name": "<%= appNameSlug %>",
+  "description": "<%= appDescription %>",
+  "version": "1.0.0",
+  "dependencies": {
+    "grunt": "~0.4.5"
+  },
+  "devDependencies": {
+    "webpack": "~1.4.9",
+	"webpack-dev-server": "^1.14.1",
+    "script-loader": "~0.5.2",
+	"time-grunt": "~0.2.10",
+	"load-grunt-configs": "^0.4.3",
+	"load-grunt-tasks": "^3.4.1",
+	"grunt-contrib-copy": "~0.5.0",
+	"grunt-contrib-jshint": "^1.0.0",
+	"grunt-contrib-watch": "~0.5.3",
+	"grunt-modernizr": "~0.6.0",
+	"grunt-webpack": "~1.0.8",
+	"grunt-contrib-clean": "~0.5.0",
+	"grunt-combine-media-queries": "^1.0.19",
+	"grunt-contrib-cssmin": "^0.10.0",
+	"grunt-contrib-imagemin": "^0.7.1",
+	<% if (hasFontAwesome) { %>
+	"grunt-webfont": "^1.1.1",
+	<% } %>
+	<% if (Webserver === 'browsersync') { %>
+	"grunt-browser-sync":"~0.7.4",
+	<% } %>
+	<% if (Webserver === 'connect') { %>
+	"grunt-contrib-connect": "~0.8.0",
+	<% } %>
+	"grunt-dust-html":"0.1.6",
+	"dustjs-helpers":"~1.2.0",
+	<% if (preProcessor === 'less') { %>
+	"grunt-contrib-less":"~0.8.3"
+	<% } else if (preProcessor === 'rubysass') { %>
+	"grunt-contrib-sass":"~0.7.3"
+	<% } else { %>
+	"grunt-sass":"~0.12.1"
+	<% } %>
+  }
+}

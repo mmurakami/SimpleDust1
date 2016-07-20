@@ -1,0 +1,10 @@
+{
+  "name": "BLAST_RADIUS_FEBoilerplate",
+  "version": "2.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "console-polyfill": "~0.1.1"
+  },
+  "overrides": {
+  }
+}
